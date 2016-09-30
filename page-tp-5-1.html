@@ -5,13 +5,38 @@
     <title>TP-5-1 / Validation de formulaire en HTML5 et CSS3</title>
     <meta charset="utf-8">
     <style>
-        body{
-            font: 0.8e Verdana, Arial;
-            w100p;
+        body {
+            font:0.8em Verdana, Arial, Helvetica, sans-serif;
+            padding:20px;
+            background-color: #eee;
+        }
 
+        input[type=text],input[type=email] {
+            border:solid 1px grey;
+            width:200px;
+            display:inline-block;
+        }
 
+        label {
+            width:140px;
+            text-align:left;
+            display:inline-block;
+        }
 
+        input[type=submit] {
+            border: solid 1px grey;
+            width:75px;
+            display:inline-block;
+            margin-left:200px;
+            background-color:#ddd;
+        }
 
+        input[type=text]:invalid, input[type=email]:invalid {
+            background: #fff url(./images-tp-5-1/rond-rouge.png) no-repeat 99% center;
+        }
+
+        input[type=text]:valid, input[type=email]:valid {
+            background: #fff url(./images-tp-5-1/rond-vert.png)no-repeat 99% center;
         }
     </style>
 
