@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TP-5-2 / Validation de formulaire JS</title>
+    <meta charset="utf-8">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div id="page">
+        <h3>Modifier mon mot de passe</h3>
+        <p><i>(8 caractères minimum avec au moins un chiffre, une lettre miniscule et une letttre majuscule)</i></p>
+        <form id="formModificationMdp" name="formModificationMdp" method="post" action="#">
+            <p>
+                <label for="txtNouveauMdp">Nouveau mot de passe*: </label>
+                <input type="password" id="txtNouveauMdp" required pattern="^.{8,}$" />
+            </p>
+            <p>
+                <label for="txtConfirmation">Confirmation* : </label>
+                <input type="password" id="txtConfirmation" required pattern="^.{8,}$" />
+            </p>
+            <p>
+                <label for="caseAfficherMdp">Afficher en clair : </label>
+                <input type="checkbox" name="caseAfficherMdp" id="caseAfficherMdp" />
+            </p>
+
+            <p>
+                <input type="submit" id="btnEnvoyer" value="Envoyer" />
+            </p>
+        </form>
+    </div>
+    <aside id="affichage_message" class="classe_message">
+        <div>
+            <h2 id="titre_message" class="classe_information">Message</h2>
+            <p id="texte_message" class="classe_texte_message">Voici le texte du message</p>
+            <a href="#close" title="Fermer">Fermer</a>
+
+        </div>
+    </aside>
+
+</body>
+
+</html>
