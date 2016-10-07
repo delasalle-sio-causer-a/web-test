@@ -5,29 +5,122 @@
     <title>~TP-5-2 / Validation de formulaire JS</title>
     <meta charset="utf-8">
     <style>
-        html {
+        html{
             height: 100%;
         }
 
-        body {
+        body{
             font: 1em Verdana;
-            background: -webkit-linear-gradient(to bottom rgb(255, 255, 255;
-            , rgb(210, 210, 210)) background: -o-linear-gradient(to bottom rgb(255, 255, 255;
-            , rgb(210, 210, 210)) background: linear-gradient(to bottom rgb(255, 255, 255), rgb(210, 210, 210));
+        background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
+        background: -o-linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
+        background: linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
         }
 
         div#page {
-            font-size: 40px;
             width: 800px;
             margin: 20px auto;
             padding: 0px 20px;
             border: #000 1px solid;
             text-align: left;
             border-radius: 15px;
-            background: -webkit-linear-gradient(rgb(210, 210, 210));
-            background: -o-linear-gradient(rgb(210, 210, 210));
-            background: linear-gradient(rgb(210, 210, 210));
+            background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
+            background: -o-linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
+            background: linear-gradient(rgb(255, 255, 255), rgb(210,210,210));
         }
+
+        .classe_message>div{
+            width: 500px;
+            background: #fff;
+            position: relative;
+            margin: 10px auto;
+            padding: 30px;
+            text-shadow: 0 1px 0 #fff;
+
+            border-radius: 7px;
+
+            box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+
+            background: -webkit-linear-gradient(rgb(255,255,255), rgb(210,210,210));
+            background: -o-linear-gradient(rgb(255,255,255), rgb(210,210,210));
+            background: linear-gradient(rgb(255,255,255), rgb(210,210,210));
+        }
+
+        #affichage_message h2.classe_avertissement{
+            padding-left: 50px;
+            line-height: 32px;
+            background: url(images-tp-5-2/avertissement.png) no-repeat left bottom;
+            color: #0b4c8e;
+        }
+         #affichage_message h2.classe_information{
+            padding-left: 50px;
+            line-height: 32px;
+            background: url(images-tp-5-2/information.png) no-repeat left bottom;
+            color: #0b4c8e;
+        }
+
+        #affichage_message p.classe_texte_message{
+            padding-left: 50px;
+            font-size: 1.2em;
+        }
+
+        .classe_message a{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #000;
+        }
+
+        .classe_message{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: rgba(0,0,0,0.3);
+            z-index: 10000;
+
+            transition: opacity 500ms ease-in;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+        .classe_message:target{
+            pointer-events: auto;
+        }
+
+        input[type=text], input[type=password], input[type=email]{
+            border: solid 1px grey;
+            width: 200px;
+            display: inline-block;
+        }
+        label{
+            width: 250px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        input[type=submit]{
+            font: 1em helvetica;
+            border: solid 1px grey;
+            width: 100px;
+            display: inline-block;
+            margin-left: 300px;
+            background-color: #ddd;
+        }
+
+        input[type=text]:invalid, input[type=passsword]:invalid{
+            background: #fff url(images-tp-5-2/rond-rouge.png) no-repeat 99% center;
+        }
+
+        input[type=text]:valid, input[type=passsword]:valid{
+            background: #fff url(images-tp-5-2/rond-vert.png) no-repeat 99% center ;
+        }
+
+        input
     </style>
 
 </head>
